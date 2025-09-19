@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.65">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Courier; color: #1f9736; -webkit-text-stroke: #1f9736}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Courier; color: #c9dbfc; color: rgba(201, 219, 252, 0.7); -webkit-text-stroke: rgba(201, 219, 252, 0.7)}
+    span.s1 {font: 12.0px 'Apple Color Emoji'}
+    span.s2 {font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s3 {font-kerning: none; color: rgba(201, 219, 252, 0.7); background-color: #191919; -webkit-text-stroke: 0px rgba(201, 219, 252, 0.7)}
+    span.s4 {font-kerning: none; background-color: #191919}
+    span.s5 {font-kerning: none; color: #1f9736; background-color: #191919; -webkit-text-stroke: 0px #1f9736}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Riley Behavior - Admin Setup&lt;/title&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #001a33;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logout-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.setup-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1200px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.setup-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #001a33;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(0, 150, 136, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.setup-card h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.status-badge {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 4px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.status-ready {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(76, 175, 80, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #4CAF50;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.status-pending {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 152, 0, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #FF9800;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.form-group {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>input, select {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(0, 150, 136, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>input:focus, select:focus {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.15);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #00796B;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-secondary {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-secondary:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(0, 150, 136, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.teacher-list, .student-list {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-height: 200px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-y: auto;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.list-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.05);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.success-msg {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(76, 175, 80, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #4CAF50;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.error-msg {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(244, 67, 54, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ff6b6b;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.quick-setup {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-column: 1 / -1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(0, 150, 136, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Firebase SDKs --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"&gt;&lt;/script&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Admin Setup - Riley Behavior Management&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="logout-btn" onclick="logout()"&gt;Logout&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="setup-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Quick Setup Card --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="setup-card quick-setup"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span><span class="s1">🚀</span> Quick Database Setup</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="status-badge status-pending"&gt;Not Initialized&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p style="margin-bottom: 20px; color: #aaa;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>First time? Click this button to create all the necessary collections in your Firestore database.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn" onclick="initializeDatabase()"&gt;Initialize Database Structure&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="dbSuccess" class="success-msg" style="margin-top: 15px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span><span class="s1">✅</span> Database initialized successfully!</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Make Yourself Admin --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="setup-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;<span class="s1">👑</span> Admin Access&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="adminError" class="error-msg"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="adminSuccess" class="success-msg"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p style="margin-bottom: 15px; color: #aaa; font-size: 14px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Current user: &lt;strong id="currentEmail"&gt;Loading...&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn" onclick="makeAdmin()"&gt;Make Me Admin&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- School Configuration --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="setup-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;<span class="s1">🏫</span> School Settings&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;School Name&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" id="schoolName" value="Riley Upper Elementary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;Current Trimester&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;select id="trimester"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;option value="1"&gt;Trimester 1&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;option value="2"&gt;Trimester 2&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;option value="3"&gt;Trimester 3&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn" onclick="saveSchoolSettings()"&gt;Save Settings&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Add Teachers --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="setup-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;<span class="s1">👩‍🏫</span> Add Teachers&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="teacherError" class="error-msg"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="teacherSuccess" class="success-msg"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;Teacher Name&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" id="teacherName" placeholder="Ms. Witherspoon"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;Email&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="email" id="teacherEmail" placeholder="teacher@livoniapublicschools.org"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;Team/Grade&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;select id="teacherTeam"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;option value="5"&gt;5th Grade&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;option value="6"&gt;6th Grade&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn" onclick="addTeacher()"&gt;Add Teacher&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="teacher-list" id="teacherList"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Add Students --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="setup-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;<span class="s1">👦</span> Add Students&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="studentError" class="error-msg"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="studentSuccess" class="success-msg"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;Student Name&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" id="studentName" placeholder="John Doe"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;Grade&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;select id="studentGrade"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;option value="5"&gt;5th Grade&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;option value="6"&gt;6th Grade&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;Homeroom Teacher&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;select id="studentTeacher"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;option value=""&gt;Select Teacher&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;Parent Email&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="email" id="parentEmail" placeholder="parent@email.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label&gt;Child's Birthday (for parent first login)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="text" id="studentBirthday" placeholder="MMDDYY" maxlength="6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn" onclick="addStudent()"&gt;Add Student&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="student-list" id="studentList"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// ============================================</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">🔴</span> PASTE YOUR SAME FIREBASE CONFIG HERE</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// ============================================</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const firebaseConfig = {</p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s3">apiKey: </span><span class="s4">"AIzaSyDfEBWpkLnqeNnOW_Zm1hP7v2nl3hfe1DU"</span><span class="s3">,</span></p>
+<p class="p3"><span class="s3">  <span class="Apple-tab-span">	</span>authDomain: </span><span class="s4">"riley-bmw.firebaseapp.com"</span><span class="s3">,</span></p>
+<p class="p4"><span class="s4">  <span class="Apple-tab-span">	</span>projectId: </span><span class="s5">"riley-bmw"</span><span class="s4">,</span></p>
+<p class="p3"><span class="s3">  <span class="Apple-tab-span">	</span>storageBucket: </span><span class="s4">"riley-bmw.firebasestorage.app"</span><span class="s3">,</span></p>
+<p class="p4"><span class="s4">  <span class="Apple-tab-span">	</span>messagingSenderId: </span><span class="s5">"651004612474"</span><span class="s4">,</span></p>
+<p class="p3"><span class="s3">  <span class="Apple-tab-span">	</span>appId: </span><span class="s4">"1:651004612474:web:db673083ac8dd08b5790c3"</span></p>
+<p class="p4"><span class="s4"><span class="Apple-tab-span">	</span>};</span></p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initialize Firebase</p>
+<p class="p1"><span class="Apple-converted-space">        </span>firebase.initializeApp(firebaseConfig);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const auth = firebase.auth();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const db = firebase.firestore();</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Check authentication</p>
+<p class="p1"><span class="Apple-converted-space">        </span>auth.onAuthStateChanged((user) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!user) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.location.href = 'index.html';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('currentEmail').textContent = user.email;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>checkAdminStatus();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>loadTeachers();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>loadStudents();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Check if user is admin</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function checkAdminStatus() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const userDoc = await db.collection('users').doc(auth.currentUser.uid).get();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (userDoc.exists &amp;&amp; userDoc.data().role !== 'admin') {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Not admin yet, show setup mode</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.querySelector('.quick-setup').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('User document not found, showing setup');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initialize database structure</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function initializeDatabase() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const batch = db.batch();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Create school config</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const schoolRef = db.collection('schools').doc('riley');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>batch.set(schoolRef, {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: 'Riley Upper Elementary',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>createdAt: firebase.firestore.FieldValue.serverTimestamp()</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Create config documents</p>
+<p class="p1"><span class="Apple-converted-space">                </span>batch.set(db.collection('schools').doc('riley').collection('config').doc('branding'), {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>primaryColor: '#000000',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>secondaryColor: '#001a33',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>accentColor: '#009688'</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>batch.set(db.collection('schools').doc('riley').collection('config').doc('grades'), {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>grades: [5, 6]</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>batch.set(db.collection('schools').doc('riley').collection('config').doc('trimesters'), {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>current: 1,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>dates: [</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>{name: 'Trimester 1', start: '2024-09-01', end: '2024-11-30'},</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>{name: 'Trimester 2', start: '2024-12-01', end: '2025-02-28'},</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>{name: 'Trimester 3', start: '2025-03-01', end: '2025-05-31'}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>]</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>await batch.commit();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('dbSuccess').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.querySelector('.status-pending').className = 'status-badge status-ready';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.querySelector('.status-pending').textContent = 'Ready';</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.error('Error initializing database:', error);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert('Error: ' + error.message);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Make current user admin</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function makeAdmin() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>await db.collection('users').doc(auth.currentUser.uid).set({</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>email: auth.currentUser.email,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>role: 'admin',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>updatedAt: firebase.firestore.FieldValue.serverTimestamp()</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, {merge: true});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('adminSuccess').textContent = '<span class="s1">✅</span> You are now an admin!';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('adminSuccess').style.display = 'block';</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Reload to apply permissions</p>
+<p class="p1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>window.location.reload();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, 1500);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('adminError').textContent = 'Error: ' + error.message;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('adminError').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Save school settings</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function saveSchoolSettings() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const name = document.getElementById('schoolName').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const trimester = document.getElementById('trimester').value;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>await db.collection('schools').doc('riley').update({</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: name,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>currentTrimester: parseInt(trimester)</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert('School settings saved!');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert('Error: ' + error.message);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Add teacher</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function addTeacher() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const name = document.getElementById('teacherName').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const email = document.getElementById('teacherEmail').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const team = document.getElementById('teacherTeam').value;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!name || !email) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('teacherError').textContent = 'Please fill all fields';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('teacherError').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Create teacher document</p>
+<p class="p1"><span class="Apple-converted-space">                </span>await db.collection('teachers').add({</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: name,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>email: email,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>grade: parseInt(team),</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>createdAt: firebase.firestore.FieldValue.serverTimestamp()</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Clear form</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('teacherName').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('teacherEmail').value = '';</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Show success</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('teacherSuccess').textContent = `<span class="s1">✅</span> Added ${name}`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('teacherSuccess').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('teacherSuccess').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, 3000);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>loadTeachers();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('teacherError').textContent = 'Error: ' + error.message;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('teacherError').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Load teachers</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function loadTeachers() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const snapshot = await db.collection('teachers').get();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const teacherList = document.getElementById('teacherList');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const teacherSelect = document.getElementById('studentTeacher');</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>teacherList.innerHTML = '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>teacherSelect.innerHTML = '&lt;option value=""&gt;Select Teacher&lt;/option&gt;';</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>snapshot.forEach(doc =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const teacher = doc.data();</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Add to list</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>teacherList.innerHTML += `</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="list-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;${teacher.name} - Grade ${teacher.grade}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>`;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Add to dropdown</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const option = document.createElement('option');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>option.value = doc.id;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>option.textContent = teacher.name;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>teacherSelect.appendChild(option);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.error('Error loading teachers:', error);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Add student</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function addStudent() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const name = document.getElementById('studentName').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const grade = document.getElementById('studentGrade').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const teacherId = document.getElementById('studentTeacher').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const parentEmail = document.getElementById('parentEmail').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const birthday = document.getElementById('studentBirthday').value;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!name || !teacherId || !parentEmail || !birthday) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('studentError').textContent = 'Please fill all fields';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('studentError').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (birthday.length !== 6) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('studentError').textContent = 'Birthday must be MMDDYY format';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('studentError').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Create student document</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const studentRef = await db.collection('students').add({</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>name: name,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>grade: parseInt(grade),</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>homeroomTeacherId: teacherId,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>parentEmails: [parentEmail],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>birthdateMMDDYY: birthday,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>status: 'active',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>createdAt: firebase.firestore.FieldValue.serverTimestamp()</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Create parent auth account</p>
+<p class="p1"><span class="Apple-converted-space">                </span>await auth.createUserWithEmailAndPassword(parentEmail, birthday)</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>.then(async (userCredential) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>// Create parent user document</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>await db.collection('users').doc(userCredential.user.uid).set({</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>email: parentEmail,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>role: 'parent',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>studentIds: [studentRef.id],</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>mustChangePassword: true</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>})</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>.catch(error =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (error.code === 'auth/email-already-in-use') {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>// Parent already exists, just update their student list</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>console.log('Parent account already exists');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Clear form</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('studentName').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('parentEmail').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('studentBirthday').value = '';</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Show success</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('studentSuccess').textContent = `<span class="s1">✅</span> Added ${name}`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('studentSuccess').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('studentSuccess').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, 3000);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>loadStudents();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('studentError').textContent = 'Error: ' + error.message;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('studentError').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Load students</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function loadStudents() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const snapshot = await db.collection('students').get();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const studentList = document.getElementById('studentList');</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>studentList.innerHTML = '';</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>snapshot.forEach(doc =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const student = doc.data();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>studentList.innerHTML += `</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="list-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;${student.name} - Grade ${student.grade}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.error('Error loading students:', error);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Logout</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function logout() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>auth.signOut().then(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.location.href = 'index.html';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
