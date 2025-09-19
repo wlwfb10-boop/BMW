@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.65">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Courier; color: #1f9736; -webkit-text-stroke: #1f9736}
+    span.s1 {font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s2 {font-kerning: none; background-color: #0f0f0f}
+    span.s3 {font: 14.0px Courier; font-kerning: none; color: #1f9736; background-color: #0f0f0f; -webkit-text-stroke: 0px #1f9736}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Riley Behavior Management - Login&lt;/title&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.login-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #001a33;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 400px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 30px rgba(0, 150, 136, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.login-tabs {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.login-form {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.login-form.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.form-group {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>input {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(0, 150, 136, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>input:focus {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.15);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-primary {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-primary:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #00796B;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.google-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.error-msg {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(244, 67, 54, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ff6b6b;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.info-msg {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(0, 150, 136, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #009688;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Firebase SDKs --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"&gt;&lt;/script&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="login-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Riley Behavior Management&lt;/h1&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="error-msg" id="errorMsg"&gt;&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="login-tabs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab-btn active" onclick="switchTab('teacher')"&gt;Teacher Login&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab-btn" onclick="switchTab('parent')"&gt;Parent Login&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Teacher Login Form --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="teacherForm" class="login-form active"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="google-btn" onclick="teacherGoogleLogin()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;svg width="20" height="20" viewBox="0 0 24 24"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Sign in with School Google Account</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="text-align: center; margin: 20px 0; color: #666;"&gt;OR&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;form onsubmit="teacherEmailLogin(event)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;School Email&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="email" id="teacherEmail" placeholder="teacher@livoniapublicschools.org" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Password&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="password" id="teacherPassword" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button type="submit" class="btn-primary"&gt;Sign In&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Parent Login Form --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="parentForm" class="login-form"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="info-msg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>First time? Use your child's birthday (MMDDYY) as the password</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;form onsubmit="parentLogin(event)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Email&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="email" id="parentEmail" placeholder="parent@email.com" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label&gt;Password&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="password" id="parentPassword" placeholder="MMDDYY for first login" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button type="submit" class="btn-primary"&gt;Sign In&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// ============================================</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const firebaseConfig = {</p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">            </span>apiKey: "</span><span class="s2">AIzaSyDfEBWpkLnqeNnOW_Zm1hP7v2nl3hfe1DU</span><span class="s1">",</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>authDomain: "<span class="s3">riley-bmw.firebaseapp.com</span>",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>projectId: "<span class="s3">riley-bmw</span>",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>storageBucket: "<span class="s3">riley-bmw.firebasestorage.app</span>",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>messagingSenderId: "<span class="s3">651004612474”</span>,</p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">            </span>appId: "</span><span class="s2">1:651004612474:web:db673083ac8dd08b5790c3</span><span class="s1">"</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initialize Firebase</p>
+<p class="p1"><span class="Apple-converted-space">        </span>firebase.initializeApp(firebaseConfig);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const auth = firebase.auth();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const db = firebase.firestore();</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// ============================================</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const ALLOWED_DOMAINS = ['livoniapublicschools.org'];</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Tab switching</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function switchTab(tab) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.tab-btn').forEach(btn =&gt; btn.classList.remove('active'));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.login-form').forEach(form =&gt; form.classList.remove('active'));</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (tab === 'teacher') {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.querySelectorAll('.tab-btn')[0].classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('teacherForm').classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.querySelectorAll('.tab-btn')[1].classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('parentForm').classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>hideError();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Show error message</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function showError(message) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const errorDiv = document.getElementById('errorMsg');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>errorDiv.textContent = message;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>errorDiv.style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Hide error message</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function hideError() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('errorMsg').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Check if email domain is allowed</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function isAllowedDomain(email) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const domain = email.split('@')[1];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return ALLOWED_DOMAINS.includes(domain);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Teacher Google Login</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function teacherGoogleLogin() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const provider = new firebase.auth.GoogleAuthProvider();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Force account selection</p>
+<p class="p1"><span class="Apple-converted-space">                </span>provider.setCustomParameters({</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>prompt: 'select_account',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>hd: ALLOWED_DOMAINS[0] // Hint to show school accounts first</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const result = await auth.signInWithPopup(provider);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const email = result.user.email;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Check if email is from allowed domain</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (!isAllowedDomain(email)) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>await auth.signOut();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showError(`Please use your school email (@${ALLOWED_DOMAINS.join(' or @')})`);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Check if user exists in database</p>
+<p class="p1"><span class="Apple-converted-space">                </span>await checkAndRedirectUser(result.user);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showError(error.message);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Teacher Email Login</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function teacherEmailLogin(event) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>event.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>hideError();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const email = document.getElementById('teacherEmail').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const password = document.getElementById('teacherPassword').value;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Check domain</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!isAllowedDomain(email)) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showError(`Please use your school email (@${ALLOWED_DOMAINS.join(' or @')})`);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const result = await auth.signInWithEmailAndPassword(email, password);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>await checkAndRedirectUser(result.user);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (error.code === 'auth/user-not-found') {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showError('No account found. Contact your administrator.');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else if (error.code === 'auth/wrong-password') {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showError('Incorrect password');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showError(error.message);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Parent Login</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function parentLogin(event) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>event.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>hideError();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const email = document.getElementById('parentEmail').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const password = document.getElementById('parentPassword').value;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const result = await auth.signInWithEmailAndPassword(email, password);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Check if this is first login (password is birthday)</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (password.length === 6 &amp;&amp; /^\d{6}$/.test(password)) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Force password change</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>window.location.href = 'change-password.html';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>await checkAndRedirectUser(result.user);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (error.code === 'auth/user-not-found') {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showError('No account found. Contact your child\'s teacher.');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else if (error.code === 'auth/wrong-password') {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showError('Incorrect password. First time? Use child\'s birthday (MMDDYY)');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showError(error.message);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Check user role and redirect</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function checkAndRedirectUser(user) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Get user document from Firestore</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const userDoc = await db.collection('users').doc(user.uid).get();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (!userDoc.exists) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// First time login - create user document</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const isTeacher = isAllowedDomain(user.email);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const role = isTeacher ? 'teacher' : 'parent';</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>await db.collection('users').doc(user.uid).set({</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>email: user.email,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>role: role,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>createdAt: firebase.firestore.FieldValue.serverTimestamp()</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Redirect based on role</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>window.location.href = role === 'teacher' ? 'teacher.html' : 'parent.html';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Existing user - redirect based on role</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const userData = userDoc.data();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>switch(userData.role) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>case 'admin':</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>window.location.href = 'admin.html';</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>case 'teacher':</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>window.location.href = 'teacher.html';</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>case 'parent':</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>window.location.href = 'parent.html';</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>default:</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>showError('Unknown user role. Contact administrator.');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.error('Error checking user:', error);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showError('Error logging in. Please try again.');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Check if already logged in</p>
+<p class="p1"><span class="Apple-converted-space">        </span>auth.onAuthStateChanged((user) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (user) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>checkAndRedirectUser(user);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
